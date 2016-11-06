@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mbr.platform</groupId>
+	<artifactId>simple-cache</artifactId>
+	<version>2.0.0</version>
+	<name>Simple Cache</name>
+	<description>============================================================
+	v 1.0.2
+	------------------------------------------------------------
+	Improvements :-
+	1) debug statements based on debug enabled 
+	2) Cache Stats collected
+	------------------------------------------------------------
+	v 2.0.0
+	------------------------------------------------------------
+	Improvements :-
+	1) Added Expiry time in secs to a Cache element.
+	E.g. if an element put in cache is declared to expire in 'n' secs. That element is removed from the Cache. The element is reloaded to Cache on next request to the element.   
+	2) Refactor the Cache types available 
+	a) Static Cache
+	b) Read-Thru - Refresh Behind Cache
+	c) Read Thru - Refresh Behind - Expire Behind Cache  
+    3) Cache SIZE Config Computation  for NO REHASHING if Opted 
+	Defects:-
+	1) NULL Safety checks on backend responses 
+	============================================================</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+		</dependency>
+	</dependencies>
+</project>
